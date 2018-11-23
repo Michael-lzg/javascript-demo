@@ -39,3 +39,19 @@ let tempArr = [1,2,3,4,5,'6',7,'8','a','b','z'].sort(function(){
 })
 // 因为里面有随机数,所以答案没有标准答案,我这边跑了一次是输出这个
 //["6", "z", 3, "b", 5, 2, 7, "8", "a", 1, 4]
+
+
+// JS 实现函数运行一秒后打印输出0-9;给定如下代码
+for(var i=0;i<10;i++){
+  setTimeout((function(i){
+   return function(){
+       console.log(i);
+   }
+  })(i),1000);
+}
+// es6
+for(let i=0;i<10;i++){
+  setTimeout(function(){
+       console.log(i);
+  },1000);
+}
